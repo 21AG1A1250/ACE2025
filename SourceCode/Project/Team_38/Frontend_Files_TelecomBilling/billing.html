@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Billing System - Billing History</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .billing-history-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        thead {
+            background-color: #007bff;
+            color: white;
+        }
+        
+        th, td {
+            padding: 12px;
+            border: 1px solid #ddd;
+            text-align: center;
+        }
+        
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+    </style>        
+    <div class="billing-history-container">
+        <h1>Billing History</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Invoice Number</th>
+                    <th>Date</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>INV123456</td>
+                    <td>2024-06-15</td>
+                    <td>Rs. 500</td>
+                    <td>Paid</td>
+                </tr>
+                <tr>
+                    <td>INV123457</td>
+                    <td>2024-07-15</td>
+                    <td>Rs. 700</td>
+                    <td>Unpaid</td>
+                </tr>
+                <tr>
+                    <td>INV123458</td>
+                    <td>2024-08-15</td>
+                    <td>Rs. 450</td>
+                    <td>Paid</td>
+                </tr>
+            
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
