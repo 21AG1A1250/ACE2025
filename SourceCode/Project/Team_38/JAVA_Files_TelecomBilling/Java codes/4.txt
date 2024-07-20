@@ -1,0 +1,59 @@
+4.Complaint:
+public class Complaint {
+    private int complaintId;
+    private int subscriberId;
+    private String description;
+    private boolean resolved;
+
+    // Constructors
+    public Complaint() {}
+
+    public Complaint(int complaintId, int subscriberId, String description, boolean resolved) {
+        this.complaintId = complaintId;
+        this.subscriberId = subscriberId;
+        this.description = description;
+        this.resolved = resolved;
+    }
+
+    // Getters
+    public int getComplaintId() {
+        return complaintId;
+    }
+
+    public int getSubscriberId() {
+        return subscriberId;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public boolean isResolved() {
+        return resolved;
+    }
+
+    // Setters
+    public void setComplaintId(int complaintId) {
+        this.complaintId = complaintId;
+    }
+
+    public void setSubscriberId(int subscriberId) {
+        this.subscriberId = subscriberId;
+    }
+    public void setDescription(String description) {
+        this.description = description;
+    }
+    public void setResolved(boolean resolved) {
+        this.resolved = resolved;
+    }
+
+    // Display method
+    public void display() {
+        System.out.println("Complaint Details:");
+        System.out.println("Complaint ID: " + complaintId);
+        System.out.println("Subscriber ID: " + subscriberId);
+        System.out.println("Description: " + description);
+        System.out.println("Resolved: " + (resolved ? "Yes" : "No"));
+        System.out.println();
+    }
+}

@@ -1,0 +1,92 @@
+2.invoice:
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
+public class Invoice {
+    private int invoiceId;
+    private int subscriberId;
+    private Date startDate;
+    private Date endDate;
+    private double totalAmount;
+    private List<CallDetailRecord> callDetailRecords;
+
+    // Constructors
+    public Invoice() {
+        callDetailRecords = new ArrayList<>();
+    }
+
+    public Invoice(int invoiceId, int subscriberId, Date startDate, Date endDate) {
+        this.invoiceId = invoiceId;
+        this.subscriberId = subscriberId;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.totalAmount = 0.0;
+        callDetailRecords = new ArrayList<>();
+    }
+
+    // Getters
+    public int getInvoiceId() {
+        return invoiceId;
+    }
+
+    public int getSubscriberId() {
+        return subscriberId;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public double getTotalAmount() {
+        return totalAmount;
+    }
+
+    public List<CallDetailRecord> getCallDetailRecords() {
+        return callDetailRecords;
+    }
+
+    // Setters
+    public void setInvoiceId(int invoiceId) {
+        this.invoiceId = invoiceId;
+    }
+
+    public void setSubscriberId(int subscriberId) {
+        this.subscriberId = subscriberId;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setTotalAmount(double totalAmount) {
+        this.totalAmount = totalAmount;
+    }
+
+    // Add a CallDetailRecord to the invoice
+    public void addCallDetailRecord(CallDetailRecord cdr) {
+        callDetailRecords.add(cdr);
+    }
+    // Display method
+    public void display() {
+        System.out.println("Invoice Details:");
+        System.out.println("Invoice ID: " + invoiceId);
+        System.out.println("Subscriber ID: " + subscriberId);
+        System.out.println("Start Date: " + startDate);
+        System.out.println("End Date: " + endDate);
+        System.out.println("Total Amount: $" + totalAmount);
+        System.out.println("Call Detail Records:");
+        for (CallDetailRecord cdr : callDetailRecords) {
+            cdr.display();
+        }
+    }
+}
