@@ -1,0 +1,38 @@
+QUERIES
+
+
+1.SUBSCRIBER
+CREATE TABLE Subscriber (
+    SubscriberID INT PRIMARY KEY AUTO_INCREMENT,
+    FirstName VARCHAR(50),
+    LastName VARCHAR(50),
+DateOfBirth DATE,
+    Gender ENUM('Male', 'Female', 'Other'),
+    Email VARCHAR(100),
+    PhoneNumber VARCHAR(15) UNIQUE,
+    Address VARCHAR(255));  
+
+
+   
+2.PLAN                                                                                                                                                                                                  
+CREATE TABLE Plan (
+    PlanID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    Cost DECIMAL(10,2)
+);   
+
+              
+3.CALL RECORD                                                                                                                                                                                                         DETAIL CREATE TABLE call_detail_record (
+    cdr_id SERIAL PRIMARY KEY,           
+    caller_id VARCHAR(15) NOT NULL,      
+    callee_id VARCHAR(15) NOT NULL,      
+    start_time TIMESTAMP NOT NULL,      
+    end_time TIMESTAMP NOT NULL,         
+    duration INT NOT NULL,               
+    call_type VARCHAR(10) NOT NULL,      
+    call_cost DECIMAL(10, 2) NOT NULL,   
+    call_status VARCHAR(20) NOT NULL,    
+    tariff_plan VARCHAR(50)              
+);    
+
+         
