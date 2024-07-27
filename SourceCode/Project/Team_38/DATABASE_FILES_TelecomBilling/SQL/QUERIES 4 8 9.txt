@@ -1,0 +1,32 @@
+4.SERVICE                                                                                                                                                                                                 CREATE TABLE Service (
+    ServiceID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    PlanID INT,
+    FOREIGN KEY (PlanID) REFERENCES Plan(PlanID)
+);
+
+
+
+
+
+8.Promotion                                                                                                                                                                                         CREATE TABLE Promotion (
+    promotion_id INT PRIMARY KEY,
+    promotion_name VARCHAR(100) NOT NULL,
+    start_date DATE NOT NULL,
+    end_date DATE NOT NULL,
+    description TEXT,
+    discount DECIMAL(5, 2),
+    status VARCHAR(20) NOT NULL
+);
+
+
+
+
+9.CUSTOMER
+CREATE TABLE Customer (
+    CustomerID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    Address VARCHAR(255)
+);
+
+

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Billing System - Plan Management</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .plan-management-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 1000px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .plan-management {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        
+        .plan-card {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 250px;
+            max-width: 250px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        
+        .plan-card h2 {
+            margin-top: 0;
+        }
+        
+        .plan-card p {
+            margin: 10px 0;
+        }
+        
+        .plan-actions {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .plan-actions button {
+            background-color: #fff;
+            color: #007bff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+        }
+        
+        .plan-actions button:hover {
+            background-color: #e6e6e6;
+        }
+    </style>        
+    <div class="plan-management-container">
+        <h1>Plan Management</h1>
+        <div class="plan-management">
+            <div class="plan-card">
+                <h2>Basic Plan</h2>
+                <p>Price: $10/month</p>
+                <p>Voice: 100 mins</p>
+                <p>Data: 1 GB</p>
+                <p>SMS: 50 messages</p>
+                <div class="plan-actions">
+                    <button class="view-btn">View Details</button>
+                    <button class="edit-btn">Edit Plan</button>
+                    <button class="delete-btn">Delete Plan</button>
+                </div>
+            </div>
+            <div class="plan-card">
+                <h2>Standard Plan</h2>
+                <p>Price: $20/month</p>
+                <p>Voice: 300 mins</p>
+                <p>Data: 5 GB</p>
+                <p>SMS: 200 messages</p>
+                <div class="plan-actions">
+                    <button class="view-btn">View Details</button>
+                    <button class="edit-btn">Edit Plan</button>
+                    <button class="delete-btn">Delete Plan</button>
+                </div>
+            </div>
+            <div class="plan-card">
+                <h2>Premium Plan</h2>
+                <p>Price: $30/month</p>
+                <p>Voice: Unlimited</p>
+                <p>Data: 10 GB</p>
+                <p>SMS: Unlimited</p>
+                <div class="plan-actions">
+                    <button class="view-btn">View Details</button>
+                    <button class="edit-btn">Edit Plan</button>
+                    <button class="delete-btn">Delete Plan</button>
+                </div>
+            </div>
+            <div class="plan-card">
+                <h2>Family Plan</h2>
+                <p>Price: $50/month</p>
+                <p>Voice: Unlimited</p>
+                <p>Data: 20 GB</p>
+                <p>SMS: Unlimited</p>
+                <p>Additional Lines: 4</p>
+                <div class="plan-actions">
+                    <button class="view-btn">View Details</button>
+                    <button class="edit-btn">Edit Plan</button>
+                    <button class="delete-btn">Delete Plan</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

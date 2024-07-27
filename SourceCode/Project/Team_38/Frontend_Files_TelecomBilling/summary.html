@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Billing System - Usage Summary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .usage-summary-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 800px;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            text-align: center;
+        }
+        
+        .usage-summary {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        
+        .usage-card {
+            background-color: #007bff;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .usage-card h2 {
+            margin-top: 0;
+        }
+        
+        .usage-card p {
+            margin: 10px 0;
+        }
+    </style>        
+    <div class="usage-summary-container">
+        <h1>Usage Summary</h1>
+        <div class="usage-summary">
+            <div class="usage-card">
+                <h2>Voice Calls</h2>
+                <p>Total Minutes: 120</p>
+                <p>Local: 80 mins</p>
+                <p>International: 40 mins</p>
+            </div>
+            <div class="usage-card">
+                <h2>Data Usage</h2>
+                <p>Total Data: 5 GB</p>
+                <p>4G: 4 GB</p>
+                <p>3G: 1 GB</p>
+            </div>
+            <div class="usage-card">
+                <h2>SMS</h2>
+                <p>Total Messages: 300</p>
+                <p>Local: 250 messages</p>
+                <p>International: 50 messages</p>
+            </div>
+            <div class="usage-card">
+                <h2>Roaming</h2>
+                <p>Minutes: 30 mins</p>
+                <p>Data: 500 MB</p>
+                <p>SMS: 20 messages</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
