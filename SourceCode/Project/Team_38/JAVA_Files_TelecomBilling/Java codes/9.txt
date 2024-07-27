@@ -1,0 +1,62 @@
+9.PLAN:
+public class Plan {
+    private int planId;
+    private String name;
+    private double monthlyFee;
+    private int includedMinutes;
+    private double minuteRate;
+
+    // Constructors
+    public Plan() {}
+
+    public Plan(int planId, String name, double monthlyFee, int includedMinutes, double minuteRate) {
+        this.planId = planId;
+        this.name = name;
+        this.monthlyFee = monthlyFee;
+        this.includedMinutes = includedMinutes;
+        this.minuteRate = minuteRate;
+    }
+
+    // Getters
+    public int getPlanId() {
+        return planId;
+    }
+    public String getName() {
+        return name;
+    }
+    public double getMonthlyFee() {
+        return monthlyFee;
+    }
+    public int getIncludedMinutes() {
+        return includedMinutes;
+    }
+    public double getMinuteRate() {
+        return minuteRate;
+    }
+    // Setters
+    public void setPlanId(int planId) {
+        this.planId = planId;
+    }
+    public void setName(String name) {
+        this.name = name;
+    }
+    public void setMonthlyFee(double monthlyFee) {
+        this.monthlyFee = monthlyFee;
+    }
+    public void setIncludedMinutes(int includedMinutes) {
+        this.includedMinutes = includedMinutes;
+    }
+    public void setMinuteRate(double minuteRate) {
+        this.minuteRate = minuteRate;
+    }
+    // Display method
+    public void display() {
+        System.out.println("Plan Details:");
+        System.out.println("Plan ID: " + planId);
+        System.out.println("Name: " + name);
+        System.out.println("Monthly Fee: $" + monthlyFee);
+        System.out.println("Included Minutes: " + includedMinutes);
+        System.out.println("Minute Rate: $" + minuteRate);
+        System.out.println();
+    }
+}

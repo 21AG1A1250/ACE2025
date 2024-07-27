@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telecom Billing System - Current Invoice</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .invoice-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 90%;
+            max-width: 600px;
+            text-align: center;
+        }
+        
+        h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+        
+        .invoice-details {
+            text-align: left;
+            margin-bottom: 20px;
+        }
+        
+        .invoice-item {
+            margin: 10px 0;
+        }
+        
+        .invoice-item strong {
+            display: inline-block;
+            width: 120px;
+        }
+        
+        #pay-now {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        #pay-now:hover {
+            background-color: #0056b3;
+        }
+    </style>        
+    <div class="invoice-container">
+        <h1>Current Invoice</h1>
+        <div class="invoice-details">
+            <div class="invoice-item">
+                <strong>Invoice Number:</strong> <span id="invoice-number">INV123459</span>
+            </div>
+            <div class="invoice-item">
+                <strong>Date:</strong> <span id="invoice-date">2024-07-18</span>
+            </div>
+            <div class="invoice-item">
+                <strong>Due Date:</strong> <span id="invoice-due-date">2024-08-18</span>
+            </div>
+            <div class="invoice-item">
+                <strong>Amount:</strong> <span id="invoice-amount">Rs. 600</span>
+            </div>
+            <div class="invoice-item">
+                <strong>Status:</strong> <span id="invoice-status">Unpaid</span>
+            </div>
+        </div>
+        <button id="pay-now">Pay Now</button>
+    </div>
+</body>
+</html>

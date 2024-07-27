@@ -1,0 +1,90 @@
+MAIN METHOD:
+package fooddelivery;
+
+import java.util.Date;
+
+public class Main {
+    public static void main(String[] args) {
+        // Creating Subscriber instances
+        Subscriber subscriber1 = new Subscriber(1, "123-456-7890", "John Doe", "123 Main St", 50.00);
+        Subscriber subscriber2 = new Subscriber(2, "987-654-3210", "Jane Smith", "456 Elm St", 75.00);
+
+        // Displaying Subscriber details
+        subscriber1.displayDetails();
+        subscriber2.displayDetails();
+
+        // Recharging balance for subscriber1
+        subscriber1.rechargeBalance(25.00);
+
+        // Making a call from subscriber2
+        subscriber2.makeCall(30); // 30 minutes call
+
+        // Creating CallDetailRecord instances
+        CallDetailRecord cdr1 = new CallDetailRecord(1, 1, new Date(), 10);
+        CallDetailRecord cdr2 = new CallDetailRecord(2, 1, new Date(), 20);
+        CallDetailRecord cdr3 = new CallDetailRecord(3, 2, new Date(), 30);
+
+        // Creating Invoice instances
+        Invoice invoice1 = new Invoice(1, 1, new Date(), new Date());
+        Invoice invoice2 = new Invoice(2, 2, new Date(), new Date());
+
+        // Adding CallDetailRecords to invoices
+        invoice1.addCallDetailRecord(cdr1);
+        invoice1.addCallDetailRecord(cdr2);
+        invoice2.addCallDetailRecord(cdr3);
+
+        // Displaying Invoice details
+        invoice1.display();
+        invoice2.display();
+    }
+}
+
+class CallDetailRecord {
+    private int callId;
+    private int subscriberId;
+    private Date callDate;
+    private int duration; // Duration in minutes
+
+    // Constructor
+    public CallDetailRecord(int callId, int subscriberId, Date callDate, int duration) {
+        this.callId = callId;
+        this.subscriberId = subscriberId;
+        this.callDate = callDate;
+        this.duration = duration;
+    }
+
+    // Getters and Setters
+    public int getCallId() {
+        return callId;
+    }
+    public void setCallId(int callId) {
+        this.callId = callId;
+    }
+    public int getSubscriberId() {
+        return subscriberId;
+    }
+    public void setSubscriberId(int subscriberId) {
+        this.subscriberId = subscriberId;
+    }
+    public Date getCallDate() {
+        return callDate;
+    }
+    public void setCallDate(Date callDate) {
+        this.callDate = callDate;
+    }
+    public int getDuration() {
+        return duration;
+    }
+    public void setDuration(int duration) {
+        this.duration = duration;
+    }
+    // Display method
+    public void display() {
+        System.out.println("Call Detail Record:");
+        System.out.println("Call ID: " + callId);
+        System.out.println("Subscriber ID: " + subscriberId);
+        System.out.println("Call Date: " + callDate);
+        System.out.println("Duration: " + duration + " minutes");
+        System.out.println();
+    }
+}

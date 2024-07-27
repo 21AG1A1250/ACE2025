@@ -1,0 +1,61 @@
+10.PAYMENT:
+import java.util.Date;
+
+public class Payment {
+    private int paymentId;
+    private int subscriberId;
+    private Date paymentDate;
+    private double amount;
+
+    // Constructors
+    public Payment() {}
+
+    public Payment(int paymentId, int subscriberId, Date paymentDate, double amount) {
+        this.paymentId = paymentId;
+        this.subscriberId = subscriberId;
+        this.paymentDate = paymentDate;
+        this.amount = amount;
+    }
+
+    // Getters
+    public int getPaymentId() {
+        return paymentId;
+    }
+
+    public int getSubscriberId() {
+        return subscriberId;
+    }
+
+    public Date getPaymentDate() {
+        return paymentDate;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    // Setters
+    public void setPaymentId(int paymentId) {
+        this.paymentId = paymentId;
+    }
+
+    public void setSubscriberId(int subscriberId) {
+        this.subscriberId = subscriberId;
+    }
+    public void setPaymentDate(Date paymentDate) {
+        this.paymentDate = paymentDate;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
+    // Display method
+    public void display() {
+        System.out.println("Payment Details:");
+        System.out.println("Payment ID: " + paymentId);
+        System.out.println("Subscriber ID: " + subscriberId);
+        System.out.println("Payment Date: " + paymentDate);
+        System.out.println("Amount: $" + amount);
+        System.out.println();
+    }
+}
