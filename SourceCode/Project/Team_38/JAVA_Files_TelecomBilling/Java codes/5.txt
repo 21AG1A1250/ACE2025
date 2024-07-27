@@ -1,0 +1,50 @@
+5.Coverage:
+public class Coverage {
+    private int coverageId;
+    private String area;
+    private boolean isCovered;
+
+    // Constructors
+    public Coverage() {}
+
+    public Coverage(int coverageId, String area, boolean isCovered) {
+        this.coverageId = coverageId;
+        this.area = area;
+        this.isCovered = isCovered;
+    }
+
+    // Getters
+    public int getCoverageId() {
+        return coverageId;
+    }
+
+    public String getArea() {
+        return area;
+    }
+
+    public boolean isCovered() {
+        return isCovered;
+    }
+
+    // Setters
+    public void setCoverageId(int coverageId) {
+        this.coverageId = coverageId;
+    }
+
+    public void setArea(String area) {
+        this.area = area;
+    }
+
+    public void setCovered(boolean covered) {
+        isCovered = covered;
+    }
+
+    // Display method
+    public void display() {
+        System.out.println("Coverage Details:");
+        System.out.println("Coverage ID: " + coverageId);
+        System.out.println("Area: " + area);
+        System.out.println("Is Covered: " + (isCovered ? "Yes" : "No"));
+        System.out.println();
+    }
+}

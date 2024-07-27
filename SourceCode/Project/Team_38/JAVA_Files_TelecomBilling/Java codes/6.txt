@@ -1,0 +1,85 @@
+6.Promotion:
+import java.util.Date;
+
+public class Promotion {
+    private int promotionId;
+    private String name;
+    private String description;
+    private Date startDate;
+    private Date endDate;
+    private double discountPercentage;
+
+    // Constructors
+    public Promotion() {}
+
+    public Promotion(int promotionId, String name, String description, Date startDate, Date endDate, double discountPercentage) {
+        this.promotionId = promotionId;
+        this.name = name;
+        this.description = description;
+        this.startDate = startDate;
+        this.endDate = endDate;
+        this.discountPercentage = discountPercentage;
+    }
+
+    // Getters
+    public int getPromotionId() {
+        return promotionId;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public Date getStartDate() {
+        return startDate;
+    }
+
+    public Date getEndDate() {
+        return endDate;
+    }
+
+    public double getDiscountPercentage() {
+        return discountPercentage;
+    }
+
+    // Setters
+    public void setPromotionId(int promotionId) {
+        this.promotionId = promotionId;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setStartDate(Date startDate) {
+        this.startDate = startDate;
+    }
+
+    public void setEndDate(Date endDate) {
+        this.endDate = endDate;
+    }
+
+    public void setDiscountPercentage(double discountPercentage) {
+        this.discountPercentage = discountPercentage;
+    }
+
+    // Display method
+    public void display() {
+        System.out.println("Promotion Details:");
+        System.out.println("Promotion ID: " + promotionId);
+        System.out.println("Name: " + name);
+        System.out.println("Description: " + description);
+        System.out.println("Start Date: " + startDate);
+        System.out.println("End Date: " + endDate);
+        System.out.println("Discount Percentage: " + discountPercentage + "%");
+        System.out.println();
+    }
+}

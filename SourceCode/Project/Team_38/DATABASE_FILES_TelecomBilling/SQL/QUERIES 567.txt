@@ -1,0 +1,31 @@
+CREATE TABLE 5.Service (
+    ServiceID INT PRIMARY KEY,
+    Name VARCHAR(255),
+    PlanID INT,
+    FOREIGN KEY (PlanID) REFERENCES Plan(PlanID)
+);
+CREATE TABLE 6.Device (
+    DeviceID INT PRIMARY KEY AUTO_INCREMENT,
+    SubscriberID INT NOT NULL,
+    DeviceType VARCHAR(50) NOT NULL,
+    Model VARCHAR(100) NOT NULL,
+    Manufacturer VARCHAR(100) NOT NULL,
+    PurchaseDate DATE NOT NULL,
+    Status VARCHAR(20) NOT NULL CHECK (Status IN ('Active', 'Inactive', 'Lost', 'Damaged')),
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (SubscriberID) REFERENCES Subscriber(SubscriberID)
+);
+CREATE TABLE 7.Complaint (
+    ComplaintID INT PRIMARY KEY AUTO_INCREMENT,
+    SubscriberID INT NOT NULL,
+    Description TEXT NOT NULL,
+    Status VARCHAR(20) NOT NULL CHECK (Status IN ('Open', 'In Progress', 'Resolved', 'Closed')),
+    DateRaised DATE NOT NULL,
+    DateResolved DATE,
+    CreatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UpdatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+
+    FOREIGN KEY (SubscriberID) REFERENCES Subscriber(SubscriberID)
+);

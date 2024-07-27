@@ -1,0 +1,90 @@
+7.CallDetailRecord:
+import java.util.Date;
+
+public class CallDetailRecord {
+    private int callId;
+    private int subscriberId;
+    private String phoneNumber;
+    private Date startTime;
+    private Date endTime;
+    private double duration;
+    private double cost;
+
+    // Constructors
+    public CallDetailRecord() {}
+
+    public CallDetailRecord(int callId, int subscriberId, String phoneNumber, Date startTime, Date endTime, double duration, double cost) {
+        this.callId = callId;
+        this.subscriberId = subscriberId;
+        this.phoneNumber = phoneNumber;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.duration = duration;
+        this.cost = cost;
+    }
+
+    // Getters
+    public int getCallId() {
+        return callId;
+    }
+
+    public int getSubscriberId() {
+        return subscriberId;
+    }
+
+    public String getPhoneNumber() {
+        return phoneNumber;
+    }
+
+    public Date getStartTime() {
+        return startTime;
+    }
+
+    public Date getEndTime() {
+        return endTime;
+    }
+
+    public double getDuration() {
+        return duration;
+    }
+
+    public double getCost() {
+        return cost;
+    }
+
+    // Setters
+    public void setCallId(int callId) {
+        this.callId = callId;
+    }
+
+    public void setSubscriberId(int subscriberId) {
+        this.subscriberId = subscriberId;
+    }
+    public void setPhoneNumber(String phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
+    public void setStartTime(Date startTime) {
+        this.startTime = startTime;
+    }
+    public void setEndTime(Date endTime) {
+        this.endTime = endTime;
+    }
+    public void setDuration(double duration) {
+        this.duration = duration;
+    }
+    public void setCost(double cost) {
+        this.cost = cost;
+    }
+    // Display method
+    public void display() {
+        System.out.println("Call Detail Record:");
+        System.out.println("Call ID: " + callId);
+        System.out.println("Subscriber ID: " + subscriberId);
+        System.out.println("Phone Number: " + phoneNumber);
+        System.out.println("Start Time: " + startTime);
+        System.out.println("End Time: " + endTime);
+        System.out.println("Duration (minutes): " + duration);
+        System.out.println("Cost: $" + cost);
+        System.out.println();
+    }
+}
